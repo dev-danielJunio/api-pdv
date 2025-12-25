@@ -3,6 +3,7 @@ module.exports = (sequelize, DataTypes) => {
     subtotal: DataTypes.DECIMAL(10, 2),
     quantidade: DataTypes.INTEGER,
     desconto: DataTypes.DECIMAL(10, 2),
+    preco_unitario: DataTypes.DECIMAL(10, 2)
   }, {
     tableName: 'pedido_venda', // 🔹 define o nome exato da tabela
     timestamps: true // se quiser createdAt/updatedAt

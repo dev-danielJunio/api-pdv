@@ -9,7 +9,7 @@ router.get('/:id', pedidoController.getPedidoById);
 
 router.post('/', pedidoController.createPedido);
 
-router.put('/:id', pedidoController.updatePedido);
+router.patch('/:id', pedidoController.updatePedido);
 
 router.delete('/:id', pedidoController.deletePedido);
 
