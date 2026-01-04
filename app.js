@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const sequelize = require('./database/connection');
+const errorHandler = require('./middlewares/errorHandler');
 app.use(express.json());
 
 // Importa rotas
@@ -8,6 +9,7 @@ const pedidoRoutes = require('./routes/pedidoRoutes');
 
 // Usa rotas de pedidos
 app.use('/pedidos', pedidoRoutes);
+app.use(errorHandler);
 
 const PORT = process.env.PORT || 3000;
 
